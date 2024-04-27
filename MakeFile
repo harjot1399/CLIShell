@@ -1,0 +1,12 @@
+CC =  g++
+
+all: shell379
+
+shell379: main.o 
+	$(CC) main.o -o shell379
+
+main.o: main.cpp
+	$(CC) -c main.cpp -o main.o
+
+clean:
+	rm -f main.o shell379
